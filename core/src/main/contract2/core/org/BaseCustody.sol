@@ -261,7 +261,7 @@ contract BaseCustody {
 
     function tearNote(address asset, uint256 noteNo, bytes32[4] sign)
     public
-    onlyMember(sign, "getTotalNoteSize", asset.addr2bytes())
+    onlyMember(sign, "tearNote", asset.addr2bytes())
     returns (bool){
         return nonFungibleAssetManager.tearNote(asset, noteNo);
     }
